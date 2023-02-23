@@ -1,0 +1,76 @@
+const axios = require('axios').default
+class EasyAvg
+{
+    // 加载特定章节
+    load_chapter():void
+    {
+
+    }
+}
+class image
+{
+    set_scale():void
+    {
+
+    }
+}
+class graphics
+{
+    load_image(url:string):void
+    {
+        
+        axios.get("img/EasyAvg.png").then(function (response:any)
+        {
+            console.log(response)
+        })
+        .catch(function (error:any)
+        {
+            console.log(error)
+        })
+        .then(function()
+        {
+            
+        })
+    }
+
+}
+class video
+{
+    load():void
+    {
+
+    }
+    play():void
+    {
+
+    }
+    stop():void
+    {
+
+    }
+}
+class audio
+{
+    load():void
+    {
+
+    }
+    pause():void
+    {
+
+    }
+    play():void
+    {
+
+    }
+    stop():void
+    {
+
+    }
+    set_volume():void
+    {
+
+    }
+}
+var Graphics = new graphics()
+var img = Graphics.load_image("img/EasyAvg.png")

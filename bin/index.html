@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyAvg-ts Demo</title>
+   
+    <script src="EasyAvg-core.js"></script>
+    <script>
+        window.EasyAvgCore.init()
+        var graphics = window.EasyAvgCore.init_graphics()
+        console.log(graphics)
+        console.log("2秒后清屏")
+        setTimeout(()=>
+        {
+            graphics.cls()
+        },2000)
+    </script>
+    <style>
+        #wrapper
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #logo_title
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="logo_title">EasyAvg-ts</h2>
+    <div id="wrapper">
+        <img width="25%" src="/bin/img/logo.png" alt="xsh studio">
+    </div>
+    
+</body>
+</html>
