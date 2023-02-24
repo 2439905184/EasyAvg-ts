@@ -5,7 +5,6 @@ export function init()
 {
     console.log("EasyAvg 核心已加载")
 }
-// 有问题！
 export function init_graphics()
 {
     var grap = new graphics.Graphics()

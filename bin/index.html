@@ -7,19 +7,11 @@
     <title>EasyAvg-ts Demo</title>
    
     <script src="EasyAvg-core.js"></script>
-    <script>
-        window.EasyAvgCore.init()
-        var graphics = window.EasyAvgCore.init_graphics()
-        console.log(graphics)
-        console.log("2秒后清屏")
-        setTimeout(()=>
-        {
-            graphics.cls()
-        },2000)
-    </script>
+    
     <style>
         #wrapper
         {
+            border: solid 2px red;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -29,12 +21,33 @@
             text-align: center;
         }
     </style>
+    <script>
+        window.EasyAvgCore.init()
+        var graphics = window.EasyAvgCore.init_graphics()
+        console.log("2秒后清屏")
+        
+        setTimeout(()=>
+        {
+            graphics.cls()
+            next()
+        },2000)
+
+        function next()
+        {
+            var i = document.getElementById("i")
+            i.src = "/bin/img/love.jpg"
+            graphics.show()
+        }
+        
+        
+    </script>
 </head>
 <body>
     <h2 id="logo_title">EasyAvg-ts</h2>
     <div id="wrapper">
-        <img width="25%" src="/bin/img/logo.png" alt="xsh studio">
+        <img id="i" width="25%" src="/bin/img/logo.png" alt="xsh studio">
     </div>
+    
     
 </body>
 </html>

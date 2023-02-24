@@ -1,21 +1,35 @@
 import * as $ from "jquery"
+const axios = require("axios")
 const lodash = require("lodash")
+
 export class Graphics
 {
     constructor()
     {
 
     }
-    load_image(url:string):any
+    show():void
     {
-        var request = new XMLHttpRequest()
-        request.open("get","logo/img/EasyAvg.png")
-        request.send(null)
-        console.log(request.response)
-        return request.response
+        $("body").children().show()
     }
     cls():void
     {
-        $("body").children().remove()
+        $("body").children().hide()
     }
 }
+// 有问题
+/*export function load_image(p_url:string)
+{
+    $.ajax(
+        {
+            async: false,
+            url: p_url,
+            type: "get",
+            success: function(result)
+            {
+                console.log(result)
+                return result
+            }
+        })
+}
+*/
